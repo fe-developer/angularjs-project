@@ -1,0 +1,33 @@
+@media (max-width: 480px) {
+	.head {
+		height: 50px;
+		line-height: 50px;
+	}
+
+	.head_logo_image {
+		width: 12px;
+		margin-top: -5px;
+	}
+
+	.head_logo_text {
+		font-size: 14px;
+	}
+
+	.main_container {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.video_item {
+		height: auto;
+	}
+
+	.video_item_box {
+		padding-bottom: 20px;
+	}
+
+	.video_item_box_video {
+		height: 160px;
+		line-height: 160px;
+	}
+}

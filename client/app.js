@@ -1,0 +1,1 @@
+angular.module('testApp', ['authService', 'mainCtrl', 'appRoutes', 'videoCtrl', 'videoService']);

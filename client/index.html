@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp" ng-controller="mainController as login">
+<head>
+	<base href="/">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crossover Video Portal</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/media.css">
+	
+	<!-- <script src="libs/jquery-3.1.1.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+	<script src="libs/angular-route.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="head">
+			<div class="container">
+				<div class="head_logo" ng-click="login.gotoMainPage();">
+					<img src="images/icons/play-button.svg" alt="" class="head_logo_image">
+					<h1 class="head_logo_text">Crossover Video Portal</h1>
+				</div>
+				<ul class="head_logout" ng-if="login.isLoggedIn();">
+					<li class="head_logout_item">Hi, {{ username }}</li>
+					<li class="head_logout_item"><a href="#" ng-click="login.logout();">Logout</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<section>
+			<div class="container main_container">
+				<div ng-view></div>
+				<div id="index-container"></div>
+			</div>
+		</section>
+
+		<footer class="foot">
+			<div class="foot_copyright container">Crossover Video Portal &copy; 2016</div>
+		</footer>
+	</div>
+
+	<script src="js/functions.js"></script>
+	<script src="app.routes.js"></script>
+	<script src="services/authService.js"></script>
+	<script src="controllers/mainControllers.js"></script>
+	<script src="controllers/videoControllers.js"></script>
+	<script src="services/videoService.js"></script>
+	<script src="app.js"></script>
+
+</body>
+</html>

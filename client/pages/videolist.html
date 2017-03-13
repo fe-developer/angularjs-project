@@ -1,0 +1,17 @@
+<div ng-controller="videoController">
+	<div class="video" scroll>
+		<div class="video_item col-md-3 col-sm-6 col-xs-12" ng-repeat="video in videos" data-id="{{ video._id }}" ng-click="watchvideo(video._id)">
+			<div class="video_item_box bg-info">
+				<div class="video_title">
+					<span class="video_title_box">{{ video.name }}</span>
+				</div>
+				<div class="video_item_box_video" style="background-image: url({{ video.video_bg }});">
+					<img src="../images/icons/play-button.svg" alt="" class="play_button">
+				</div>
+				<div class="video_item_box_ratings"></div>
+				<div class="video_item_box_desc">{{ video.description }}</div>
+			</div>
+		</div>
+	</div>
+	<div class="video_loading hidden" id="loadMoreVideosSVG"><img src="../images/icons/svg-preloader.svg" alt="" class="video_loading_icon"> loading</div>
+</div>
